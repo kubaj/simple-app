@@ -22,6 +22,6 @@ func main() {
 	log.Print("Simple app server started...")
 	http.HandleFunc("/", handler)
 	
-	port := os.GetEnv("PORT")
+	port := os.Getenv("PORT")
 	http.ListenAndServe(":" + port, nil)
 }
